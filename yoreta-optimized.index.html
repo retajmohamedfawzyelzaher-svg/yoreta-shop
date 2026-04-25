@@ -1,0 +1,1302 @@
+<!-- 
+  YORETA SHOP - Optimized for Social Sharing
+  ==========================================
+  To make this link work on WhatsApp without "untrusted site" warnings:
+
+  OPTION 1 (Recommended): GitHub Pages (FREE)
+  1. Create free account at github.com
+  2. Create new repository named "yoreta-shop"
+  3. Upload this file as "index.html"
+  4. Go to Settings → Pages → Select "main" branch → Save
+  5. Your link: https://YOURUSERNAME.github.io/yoreta-shop
+
+  OPTION 2: Netlify Drop (FREE & Fast)
+  1. Go to app.netlify.com/drop
+  2. Drag and drop this HTML file
+  3. Get instant link like: https://yoreta-shop-123.netlify.app
+
+  OPTION 3: Vercel (FREE)
+  1. Go to vercel.com
+  2. Upload this file
+  3. Get clean link
+
+  After hosting, replace "https://yoreta-shop.netlify.app" in the 
+  share section below with your actual link.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YORETA — Cute outside, chaos inside. Premium oversized hoodies for dreamers and overthinkers. Shop the dreamy chaos collection.">
+    <meta name="keywords" content="YORETA, hoodies, korean fashion, streetwear, oversized, cute, aesthetic, dreamer">
+    <meta name="author" content="YORETA">
+    <meta name="theme-color" content="#d9a6b3">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoreta-shop.netlify.app">
+    <meta property="og:title" content="YORETA — Cute Outside, Chaos Inside">
+    <meta property="og:description" content="Premium oversized hoodies for dreamers and overthinkers. Shop the dreamy chaos collection. ✦">
+    <meta property="og:image" content="https://i.etsystatic.com/45116146/r/il/468a54/6792027315/il_fullxfull.6792027315_1m3j.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="YORETA">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yoreta-shop.netlify.app">
+    <meta property="twitter:title" content="YORETA — Cute Outside, Chaos Inside">
+    <meta property="twitter:description" content="Premium oversized hoodies for dreamers and overthinkers. Shop the dreamy chaos collection. ✦">
+    <meta property="twitter:image" content="https://i.etsystatic.com/45116146/r/il/468a54/6792027315/il_fullxfull.6792027315_1m3j.jpg">
+
+    <!-- Apple / iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="YORETA">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+    <title>YORETA — Cute Outside, Chaos Inside | Dreamy Hoodies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0f0f14;
+            --dark: #14141c;
+            --card: #1a1a22;
+            --pink: #d9a6b3;
+            --cream: #f6f1eb;
+            --lavender: #b8a7d9;
+            --glow: rgba(217, 166, 179, 0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--black);
+            color: var(--cream);
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Role Gate Overlay */
+        .role-gate {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark) 50%, var(--black) 100%);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .role-gate.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .role-gate h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 8vw, 80px);
+            color: var(--cream);
+            letter-spacing: 10px;
+        }
+        .role-gate p {
+            color: var(--pink);
+            font-size: clamp(16px, 2vw, 22px);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .role-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .role-btn {
+            background: transparent;
+            border: 2px solid var(--pink);
+            color: var(--pink);
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .role-btn:hover {
+            background: var(--pink);
+            color: var(--black);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 40px rgba(217, 166, 179, 0.4);
+        }
+        .role-btn.seller-btn {
+            border-color: var(--lavender);
+            color: var(--lavender);
+        }
+        .role-btn.seller-btn:hover {
+            background: var(--lavender);
+            color: var(--black);
+            box-shadow: 0 10px 40px rgba(184, 167, 217, 0.4);
+        }
+
+        /* Locked State Styles */
+        .locked .seller-toggle,
+        .locked .seller-panel,
+        .locked .seller-overlay {
+            display: none !important;
+        }
+        .locked .card {
+            cursor: default !important;
+        }
+        .locked .drag-hint {
+            display: none !important;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            width: 20px; height: 20px;
+            border: 2px solid var(--pink);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease, background 0.2s ease;
+            mix-blend-mode: difference;
+        }
+        .cursor.hover { transform: scale(2); background: var(--pink); }
+        .cursor-dot {
+            width: 6px; height: 6px;
+            background: var(--pink);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Floating Stars */
+        .stars {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 0;
+        }
+        .star {
+            position: absolute;
+            width: 3px; height: 3px;
+            background: var(--cream);
+            border-radius: 50%;
+            opacity: 0;
+            animation: twinkle var(--duration) ease-in-out infinite;
+            animation-delay: var(--delay);
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: var(--opacity); transform: scale(1.2); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(15, 15, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(217, 166, 179, 0.1);
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px; font-weight: 700;
+            color: var(--cream);
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+        .logo span { color: var(--pink); }
+        .nav-links {
+            display: flex; gap: 40px; list-style: none;
+        }
+        .nav-links a {
+            color: var(--cream); text-decoration: none;
+            font-size: 14px; letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative; cursor: pointer;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute;
+            bottom: -5px; left: 0;
+            width: 0; height: 1px;
+            background: var(--pink);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--pink); }
+        .nav-links a:hover::after { width: 100%; }
+        .cart-icon { position: relative; cursor: pointer; }
+        .cart-count {
+            position: absolute; top: -8px; right: -8px;
+            background: var(--pink); color: var(--black);
+            font-size: 10px; font-weight: 700;
+            width: 18px; height: 18px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; position: relative; overflow: hidden;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark) 50%, var(--black) 100%);
+        }
+        .hero::before {
+            content: ''; position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(184, 167, 217, 0.05) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .hero-content { position: relative; z-index: 2; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(60px, 12vw, 120px);
+            color: var(--cream); letter-spacing: 15px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 0 0 40px rgba(246, 241, 235, 0.1);
+        }
+        .hero p {
+            color: var(--pink);
+            font-size: clamp(18px, 3vw, 28px);
+            letter-spacing: 3px; margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+            font-weight: 300;
+        }
+        .btn {
+            display: inline-block; background: var(--pink); color: var(--black);
+            padding: 18px 40px; border-radius: 50px;
+            text-decoration: none; font-weight: 700;
+            font-size: 14px; letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 20px var(--glow);
+            animation: fadeInUp 1s ease-out 0.6s both;
+            border: none; position: relative; overflow: hidden; cursor: pointer;
+        }
+        .btn::before {
+            content: ''; position: absolute; top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 40px rgba(217, 166, 179, 0.4);
+        }
+        .btn:hover::before { left: 100%; }
+        .scroll-indicator {
+            position: absolute; bottom: 40px; left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        .scroll-indicator span {
+            display: block; width: 20px; height: 20px;
+            border-bottom: 2px solid var(--pink);
+            border-right: 2px solid var(--pink);
+            transform: rotate(45deg);
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-10px); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Products */
+        .products {
+            padding: 100px 60px;
+            background: var(--black);
+            position: relative; z-index: 1;
+        }
+        .section-title { text-align: center; margin-bottom: 30px; }
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            color: var(--cream); margin-bottom: 15px; letter-spacing: 3px;
+        }
+        .section-title p { color: var(--pink); font-size: 16px; letter-spacing: 2px; }
+        .drag-hint {
+            text-align: center; margin-bottom: 30px;
+            color: var(--lavender); font-size: 14px; letter-spacing: 2px;
+            opacity: 0.7; animation: pulse-hint 2s ease-in-out infinite;
+        }
+        @keyframes pulse-hint { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; max-width: 1200px; margin: 0 auto; min-height: 500px;
+        }
+        .card {
+            background: var(--card); border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(217, 166, 179, 0.1);
+            position: relative; cursor: grab; user-select: none;
+        }
+        .card.dragging {
+            cursor: grabbing; opacity: 0.95;
+            transform: scale(1.08) rotate(3deg);
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.7), 0 0 60px rgba(217, 166, 179, 0.25);
+            z-index: 100;
+        }
+        .card.drag-over {
+            border-color: var(--pink);
+            box-shadow: 0 0 40px rgba(217, 166, 179, 0.3);
+            transform: scale(1.03);
+        }
+        .card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(217, 166, 179, 0.1) 0%, transparent 50%);
+            opacity: 0; transition: opacity 0.4s ease;
+            border-radius: 24px; pointer-events: none;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(217, 166, 179, 0.1);
+            border-color: rgba(217, 166, 179, 0.3);
+        }
+        .card:hover::before { opacity: 1; }
+        .card-image {
+            width: 100%; height: 350px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--card) 100%);
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .card-image::after {
+            content: '✦'; font-size: 120px;
+            color: rgba(217, 166, 179, 0.1);
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        .card-badge {
+            position: absolute; top: 20px; right: 20px;
+            background: var(--pink); color: var(--black);
+            padding: 8px 16px; border-radius: 20px;
+            font-size: 12px; font-weight: 700; letter-spacing: 1px;
+        }
+        .card-info { padding: 30px; text-align: center; }
+        .card h3 {
+            color: var(--cream); font-size: 22px;
+            margin-bottom: 10px; font-weight: 600; letter-spacing: 1px;
+        }
+        .card .price {
+            color: var(--pink); font-size: 24px;
+            font-weight: 700; margin-bottom: 20px; display: block;
+        }
+        .add-to-cart {
+            background: transparent; border: 2px solid var(--pink);
+            color: var(--pink); padding: 12px 30px;
+            border-radius: 30px; cursor: pointer;
+            font-family: 'Poppins', sans-serif; font-weight: 600;
+            font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+            transition: all 0.3s ease; width: 100%;
+        }
+        .add-to-cart:hover {
+            background: var(--pink); color: var(--black);
+            box-shadow: 0 0 20px var(--glow);
+        }
+        .card-image img {
+            width: 100%; height: 100%; object-fit: cover;
+            position: relative; z-index: 1;
+        }
+
+        /* Drag Ghost */
+        .drag-ghost {
+            position: fixed; pointer-events: none;
+            z-index: 9998; opacity: 0.9;
+            transform: scale(1.05) rotate(3deg);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            border-radius: 24px; overflow: hidden;
+        }
+        .drag-ghost .card-image::after {
+            display: none;
+        }
+
+        /* About */
+        .about {
+            background: var(--dark); padding: 120px 60px;
+            text-align: center; position: relative; overflow: hidden;
+        }
+        .about::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--pink), transparent);
+        }
+        .about-content { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            color: var(--cream); margin-bottom: 30px; letter-spacing: 3px;
+        }
+        .about p {
+            color: rgba(246, 241, 235, 0.8); font-size: 18px;
+            line-height: 1.8; margin-bottom: 40px; font-weight: 300;
+        }
+        .about-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px; color: var(--pink); font-style: italic;
+            position: relative; display: inline-block;
+        }
+        .about-quote::before, .about-quote::after {
+            content: '"'; font-size: 40px;
+            color: var(--lavender); opacity: 0.5; position: absolute;
+        }
+        .about-quote::before { top: -20px; left: -30px; }
+        .about-quote::after { bottom: -30px; right: -30px; }
+
+        /* Packaging */
+        .packaging {
+            background: var(--dark); padding: 100px 60px; text-align: center;
+        }
+        .packaging h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--cream); margin-bottom: 50px; letter-spacing: 2px;
+        }
+        .pack-grid {
+            display: flex; justify-content: center;
+            gap: 40px; flex-wrap: wrap;
+            max-width: 900px; margin: 0 auto;
+        }
+        .pack-item {
+            background: var(--card); padding: 40px 30px;
+            border-radius: 20px; width: 200px;
+            border: 1px solid rgba(217, 166, 179, 0.1);
+            transition: all 0.3s ease;
+        }
+        .pack-item:hover {
+            transform: translateY(-5px); border-color: var(--pink);
+            box-shadow: 0 10px 30px rgba(217, 166, 179, 0.1);
+        }
+        .pack-icon { font-size: 40px; margin-bottom: 15px; display: block; }
+        .pack-item h4 { color: var(--cream); font-size: 16px; margin-bottom: 8px; letter-spacing: 1px; }
+        .pack-item p { color: var(--lavender); font-size: 13px; line-height: 1.5; }
+
+        /* Share */
+        .share-section {
+            background: var(--black); padding: 80px 60px; text-align: center;
+            border-top: 1px solid rgba(217, 166, 179, 0.1);
+            border-bottom: 1px solid rgba(217, 166, 179, 0.1);
+        }
+        .share-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            color: var(--cream); margin-bottom: 15px; letter-spacing: 2px;
+        }
+        .share-section > p { color: var(--lavender); margin-bottom: 40px; font-size: 16px; letter-spacing: 1px; }
+        .share-box {
+            background: var(--card); border-radius: 20px;
+            padding: 30px; max-width: 600px; margin: 0 auto;
+            border: 1px solid rgba(217, 166, 179, 0.1);
+        }
+        .share-link { display: flex; gap: 15px; align-items: center; margin-bottom: 25px; }
+        .share-link input {
+            flex: 1; background: var(--dark);
+            border: 1px solid rgba(217, 166, 179, 0.2);
+            border-radius: 12px; padding: 14px 18px;
+            color: var(--cream); font-family: 'Poppins', sans-serif;
+            font-size: 14px; letter-spacing: 1px;
+        }
+        .share-link input:focus { outline: none; border-color: var(--pink); }
+        .copy-btn {
+            background: var(--pink); color: var(--black); border: none;
+            border-radius: 12px; padding: 14px 24px;
+            font-family: 'Poppins', sans-serif; font-weight: 700;
+            font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+            cursor: pointer; transition: all 0.3s ease; white-space: nowrap;
+        }
+        .copy-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(217, 166, 179, 0.3); }
+        .copy-btn.copied { background: var(--lavender); }
+        .social-share { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .social-btn {
+            background: var(--dark); border: 1px solid rgba(217, 166, 179, 0.2);
+            border-radius: 12px; padding: 12px 24px;
+            color: var(--cream); font-family: 'Poppins', sans-serif;
+            font-size: 13px; letter-spacing: 1px; cursor: pointer;
+            transition: all 0.3s ease; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .social-btn:hover { border-color: var(--pink); color: var(--pink); transform: translateY(-2px); }
+
+        /* Footer */
+        footer {
+            background: var(--black); padding: 60px; text-align: center;
+            border-top: 1px solid rgba(217, 166, 179, 0.1);
+        }
+        .footer-logo {
+            font-family: 'Playfair Display', serif; font-size: 32px;
+            color: var(--cream); letter-spacing: 5px; margin-bottom: 20px;
+        }
+        .footer-tagline {
+            color: var(--pink); font-size: 16px;
+            letter-spacing: 2px; margin-bottom: 30px; font-style: italic;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap; }
+        .footer-links a { color: rgba(246, 241, 235, 0.6); text-decoration: none; font-size: 14px; transition: color 0.3s ease; letter-spacing: 1px; }
+        .footer-links a:hover { color: var(--pink); }
+        .copyright { color: rgba(246, 241, 235, 0.4); font-size: 13px; letter-spacing: 1px; }
+
+        /* Music Toggle */
+        .music-toggle {
+            position: fixed; bottom: 30px; right: 30px;
+            width: 50px; height: 50px; background: var(--card);
+            border: 2px solid var(--pink); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 100;
+            transition: all 0.3s ease; color: var(--pink); font-size: 20px;
+        }
+        .music-toggle:hover { background: var(--pink); color: var(--black); box-shadow: 0 0 20px var(--glow); }
+        .music-toggle.playing { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(217, 166, 179, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(217, 166, 179, 0); }
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed; top: 0; right: -400px;
+            width: 400px; height: 100vh; background: var(--card);
+            z-index: 200; transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 40px; border-left: 1px solid rgba(217, 166, 179, 0.2);
+            overflow-y: auto;
+        }
+        .cart-sidebar.open { right: 0; }
+        .cart-overlay {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7);
+            z-index: 199; opacity: 0; visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .cart-overlay.open { opacity: 1; visibility: visible; }
+        .cart-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 30px; padding-bottom: 20px;
+            border-bottom: 1px solid rgba(217, 166, 179, 0.2);
+        }
+        .cart-header h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--cream); letter-spacing: 2px; }
+        .close-cart { background: none; border: none; color: var(--pink); font-size: 24px; cursor: pointer; transition: transform 0.3s ease; }
+        .close-cart:hover { transform: rotate(90deg); }
+        .cart-item { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(217, 166, 179, 0.1); }
+        .cart-item-image { width: 80px; height: 80px; background: var(--dark); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 30px; flex-shrink: 0; }
+        .cart-item-info h4 { color: var(--cream); font-size: 16px; margin-bottom: 5px; }
+        .cart-item-info p { color: var(--pink); font-weight: 700; }
+        .cart-total { margin-top: 30px; padding-top: 20px; border-top: 2px solid rgba(217, 166, 179, 0.2); display: flex; justify-content: space-between; align-items: center; }
+        .cart-total span { color: var(--cream); font-size: 18px; }
+        .cart-total strong { color: var(--pink); font-size: 24px; font-family: 'Playfair Display', serif; }
+        .checkout-btn { width: 100%; margin-top: 20px; padding: 16px; background: var(--pink); color: var(--black); border: none; border-radius: 30px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; }
+        .checkout-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(217, 166, 179, 0.3); }
+        .empty-cart { text-align: center; padding: 60px 0; color: rgba(246, 241, 235, 0.5); }
+        .empty-cart-icon { font-size: 60px; margin-bottom: 20px; display: block; }
+
+        /* Notification */
+        .notification {
+            position: fixed; top: 100px; right: -400px;
+            background: var(--card); border: 1px solid var(--pink);
+            padding: 20px 30px; border-radius: 16px; z-index: 300;
+            transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            display: flex; align-items: center; gap: 15px;
+        }
+        .notification.show { right: 30px; }
+        .notification-icon { font-size: 24px; }
+        .notification-text h4 { color: var(--cream); font-size: 16px; margin-bottom: 3px; }
+        .notification-text p { color: var(--pink); font-size: 14px; }
+
+        /* Seller Panel */
+        .seller-panel {
+            position: fixed; top: 0; left: -450px;
+            width: 420px; height: 100vh; background: var(--card);
+            z-index: 250; transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 40px; border-right: 1px solid rgba(217, 166, 179, 0.2);
+            overflow-y: auto; box-shadow: 10px 0 40px rgba(0,0,0,0.5);
+        }
+        .seller-panel.open { left: 0; }
+        .seller-overlay {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7);
+            z-index: 249; opacity: 0; visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .seller-overlay.open { opacity: 1; visibility: visible; }
+        .seller-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid rgba(217, 166, 179, 0.2); }
+        .seller-header h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--cream); letter-spacing: 2px; }
+        .close-seller { background: none; border: none; color: var(--pink); font-size: 24px; cursor: pointer; transition: transform 0.3s ease; }
+        .close-seller:hover { transform: rotate(90deg); }
+        .seller-product { background: var(--dark); border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(217, 166, 179, 0.1); }
+        .seller-product h4 { color: var(--pink); font-size: 14px; margin-bottom: 15px; letter-spacing: 2px; text-transform: uppercase; }
+        .seller-input-group { margin-bottom: 15px; }
+        .seller-input-group label { display: block; color: var(--lavender); font-size: 12px; margin-bottom: 6px; letter-spacing: 1px; text-transform: uppercase; }
+        .seller-input-group input, .seller-input-group select {
+            width: 100%; background: var(--card);
+            border: 1px solid rgba(217, 166, 179, 0.2);
+            border-radius: 10px; padding: 12px 15px;
+            color: var(--cream); font-family: 'Poppins', sans-serif;
+            font-size: 14px; transition: all 0.3s ease;
+        }
+        .seller-input-group input:focus, .seller-input-group select:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 10px rgba(217, 166, 179, 0.2); }
+        .file-input-wrapper { position: relative; overflow: hidden; display: inline-block; width: 100%; }
+        .file-input-wrapper input[type=file] {
+            position: absolute; left: 0; top: 0; opacity: 0;
+            width: 100%; height: 100%; cursor: pointer;
+        }
+        .file-input-label {
+            display: block; width: 100%;
+            background: var(--card); border: 2px dashed rgba(217, 166, 179, 0.3);
+            border-radius: 10px; padding: 20px;
+            color: var(--lavender); text-align: center;
+            font-size: 13px; cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .file-input-label:hover { border-color: var(--pink); color: var(--pink); }
+        .file-input-label.has-file { border-color: var(--pink); color: var(--pink); }
+        .save-btn {
+            width: 100%; padding: 14px; background: var(--pink);
+            color: var(--black); border: none; border-radius: 30px;
+            font-family: 'Poppins', sans-serif; font-weight: 700;
+            font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+            cursor: pointer; transition: all 0.3s ease; margin-top: 10px;
+        }
+        .save-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(217, 166, 179, 0.3); }
+        .seller-toggle {
+            position: fixed; bottom: 30px; left: 30px;
+            width: 50px; height: 50px; background: var(--card);
+            border: 2px solid var(--lavender); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 100;
+            transition: all 0.3s ease; color: var(--lavender); font-size: 20px;
+        }
+        .seller-toggle:hover { background: var(--lavender); color: var(--black); box-shadow: 0 0 20px rgba(184, 167, 217, 0.3); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { display: none; }
+            .products, .about, .packaging, .share-section, footer { padding: 60px 20px; }
+            .cart-sidebar, .seller-panel { width: 100%; right: -100%; left: -100%; }
+            .seller-panel.open { left: 0; }
+            .cursor, .cursor-dot { display: none; }
+            body { cursor: auto; }
+            .share-link { flex-direction: column; }
+            .share-link input { width: 100%; }
+            .copy-btn { width: 100%; }
+            .role-buttons { flex-direction: column; width: 100%; padding: 0 40px; }
+            .role-btn { width: 100%; }
+        }
+
+        /* Scroll Reveal */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <!-- ROLE GATE -->
+    <div class="role-gate" id="roleGate">
+        <h1>YORETA</h1>
+        <p>Who are you?</p>
+        <div class="role-buttons">
+            <button class="role-btn" id="btnUser">I'm a Customer</button>
+            <button class="role-btn seller-btn" id="btnSeller">I'm the Seller</button>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Floating Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">YOR<span>ETA</span></a>
+        <ul class="nav-links">
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#packaging">Packaging</a></li>
+            <li><a href="#share">Share</a></li>
+        </ul>
+        <div class="cart-icon" id="cartIcon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--cream);">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>YORETA</h1>
+            <p>cute outside, chaos inside</p>
+            <a href="#shop" class="btn">SHOP NOW</a>
+        </div>
+        <div class="scroll-indicator"><span></span></div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="shop">
+        <div class="section-title reveal">
+            <h2>Featured Drops</h2>
+            <p>oversized hoodies for dreamers</p>
+        </div>
+        <div class="drag-hint reveal" id="dragHint">✦ drag and drop to reorder your favorites ✦</div>
+        <div class="product-grid" id="productGrid">
+            <div class="card reveal" draggable="true" data-id="0">
+                <div class="card-image" id="cardImg0" style="background: linear-gradient(135deg, var(--dark) 0%, var(--card) 100%);">
+                    <img src="https://i.etsystatic.com/45116146/r/il/468a54/6792027315/il_fullxfull.6792027315_1m3j.jpg" alt="Product 1" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1;" loading="lazy">
+                    <span class="card-badge" data-badge="0">NEW</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name" data-name="0">Moon Shadow Hoodie</h3>
+                    <span class="price" data-price="0">850 EGP</span>
+                    <button class="add-to-cart" data-product="Moon Shadow Hoodie" data-price="850">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card reveal" draggable="true" data-id="1">
+                <div class="card-image" id="cardImg1" style="background: linear-gradient(135deg, var(--dark) 0%, var(--card) 100%);">
+                    <img src="https://img4.dhresource.com/webp/m/0x0/f3/albu/jc/j/15/56da4223-30d8-4ffe-9a58-0957aaa141ad.jpg" alt="Product 2" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1;" loading="lazy">
+                    <span class="card-badge" data-badge="1">HOT</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name" data-name="1">Yami Dream Hoodie</h3>
+                    <span class="price" data-price="1">920 EGP</span>
+                    <button class="add-to-cart" data-product="Yami Dream Hoodie" data-price="920">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card reveal" draggable="true" data-id="2">
+                <div class="card-image" id="cardImg2" style="background: linear-gradient(135deg, var(--dark) 0%, var(--card) 100%);">
+                    <img src="https://img4.dhresource.com/webp/m/0x0/f3/albu/jc/z/07/cfed0255-c0dc-41d2-b95a-78f9c4071fe5.jpg" alt="Product 3" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1;" loading="lazy">
+                    <span class="card-badge" data-badge="2">LIMITED</span>
+                </div>
+                <div class="card-info">
+                    <h3 class="product-name" data-name="2">Cloud Chaos Hoodie</h3>
+                    <span class="price" data-price="2">880 EGP</span>
+                    <button class="add-to-cart" data-product="Cloud Chaos Hoodie" data-price="880">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about-content reveal">
+            <h2>About Yoreta</h2>
+            <p>Yoreta is a fashion world built for dreamers, overthinkers, and people who love cute and dark aesthetics together. We believe in the beauty of contrast — soft pink glows against midnight black, oversized comfort with sharp streetwear edge.</p>
+            <div class="about-quote">you found a piece of the yoreta universe</div>
+        </div>
+    </section>
+
+    <!-- Packaging -->
+    <section class="packaging" id="packaging">
+        <div class="reveal">
+            <h2>Every Order Includes</h2>
+            <div class="pack-grid">
+                <div class="pack-item"><span class="pack-icon">💌</span><h4>Thank You Card</h4><p>Handwritten vibes, digital soul</p></div>
+                <div class="pack-item"><span class="pack-icon">✨</span><h4>Sticker Pack</h4><p>Decorate your world</p></div>
+                <div class="pack-item"><span class="pack-icon">🌙</span><h4>Quote Card</h4><p>Hidden messages inside</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share -->
+    <section class="share-section" id="share">
+        <div class="reveal">
+            <h2>Share Yoreta</h2>
+            <p>spread the dreamy chaos ✦</p>
+            <div class="share-box">
+                <div class="share-link">
+                    <input type="text" id="shareUrl" value="https://yoreta-shop.netlify.app" readonly>
+                    <button class="copy-btn" id="copyBtn">Copy Link</button>
+                </div>
+                <div class="social-share">
+                    <a href="https://wa.me/?text=Check%20out%20YORETA%20—%20cute%20outside,%20chaos%20inside%20✦%20https://yoreta-shop.netlify.app" target="_blank" class="social-btn">📱 WhatsApp</a>
+                    <a href="https://t.me/share/url?url=https://yoreta-shop.netlify.app&text=YORETA%20—%20cute%20outside,%20chaos%20inside%20✦" target="_blank" class="social-btn">✈️ Telegram</a>
+                    <a href="https://twitter.com/intent/tweet?text=YORETA%20—%20cute%20outside,%20chaos%20inside%20✦&url=https://yoreta-shop.netlify.app" target="_blank" class="social-btn">🐦 X / Twitter</a>
+                    <a href="mailto:?subject=Check%20out%20YORETA&body=YORETA%20—%20cute%20outside,%20chaos%20inside%20✦%0A%0Ahttps://yoreta-shop.netlify.app" class="social-btn">📧 Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">YORETA</div>
+        <div class="footer-tagline">a secret Korean streetwear shop hidden in a neon alley at midnight</div>
+        <div class="footer-links">
+            <a href="#">Shop</a><a href="#">About</a><a href="#">Shipping</a><a href="#">Contact</a><a href="#">Instagram</a>
+        </div>
+        <div class="copyright">© 2026 YORETA. All rights reserved. Cute outside, chaos inside.</div>
+    </footer>
+
+    <!-- Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header"><h3>Your Cart</h3><button class="close-cart" id="closeCart">✕</button></div>
+        <div id="cartItems">
+            <div class="empty-cart"><span class="empty-cart-icon">🌙</span><p>Your cart is empty</p><p style="font-size: 13px; margin-top: 10px;">Add some dreamy hoodies ✨</p></div>
+        </div>
+        <div class="cart-total" id="cartTotal" style="display: none;"><span>Total</span><strong id="totalPrice">0 EGP</strong></div>
+        <button class="checkout-btn" id="checkoutBtn" style="display: none;">Checkout</button>
+    </div>
+
+    <!-- Seller Panel -->
+    <div class="seller-overlay" id="sellerOverlay"></div>
+    <div class="seller-panel" id="sellerPanel">
+        <div class="seller-header"><h3>✦ Seller Panel</h3><button class="close-seller" id="closeSeller">✕</button></div>
+
+        <div class="seller-product">
+            <h4>Product 1</h4>
+            <div class="seller-input-group"><label>Hoodie Name</label><input type="text" id="sellerName0" value="Moon Shadow Hoodie"></div>
+            <div class="seller-input-group"><label>Price (EGP)</label><input type="number" id="sellerPrice0" value="850"></div>
+            <div class="seller-input-group"><label>Badge</label>
+                <select id="sellerBadge0"><option value="NEW">NEW</option><option value="HOT">HOT</option><option value="LIMITED">LIMITED</option><option value="SALE">SALE</option><option value="">None</option></select>
+            </div>
+            <div class="seller-input-group">
+                <label>Product Photo</label>
+                <div class="file-input-wrapper">
+                    <div class="file-input-label" id="fileLabel0">📷 Click or drop photo here</div>
+                    <input type="file" id="sellerPhoto0" accept="image/*">
+                </div>
+            
+            <button class="save-btn" id="deletePhoto0" style="background: transparent; border: 2px solid #ff6b6b; color: #ff6b6b; margin-top: 10px; display: none;">🗑 Delete Photo</button></div>
+        </div>
+
+        <div class="seller-product">
+            <h4>Product 2</h4>
+            <div class="seller-input-group"><label>Hoodie Name</label><input type="text" id="sellerName1" value="Yami Dream Hoodie"></div>
+            <div class="seller-input-group"><label>Price (EGP)</label><input type="number" id="sellerPrice1" value="920"></div>
+            <div class="seller-input-group"><label>Badge</label>
+                <select id="sellerBadge1"><option value="HOT">HOT</option><option value="NEW">NEW</option><option value="LIMITED">LIMITED</option><option value="SALE">SALE</option><option value="">None</option></select>
+            </div>
+            <div class="seller-input-group">
+                <label>Product Photo</label>
+                <div class="file-input-wrapper">
+                    <div class="file-input-label" id="fileLabel1">📷 Click or drop photo here</div>
+                    <input type="file" id="sellerPhoto1" accept="image/*">
+                </div>
+            
+            <button class="save-btn" id="deletePhoto1" style="background: transparent; border: 2px solid #ff6b6b; color: #ff6b6b; margin-top: 10px; display: none;">🗑 Delete Photo</button></div>
+        </div>
+
+        <div class="seller-product">
+            <h4>Product 3</h4>
+            <div class="seller-input-group"><label>Hoodie Name</label><input type="text" id="sellerName2" value="Cloud Chaos Hoodie"></div>
+            <div class="seller-input-group"><label>Price (EGP)</label><input type="number" id="sellerPrice2" value="880"></div>
+            <div class="seller-input-group"><label>Badge</label>
+                <select id="sellerBadge2"><option value="LIMITED">LIMITED</option><option value="NEW">NEW</option><option value="HOT">HOT</option><option value="SALE">SALE</option><option value="">None</option></select>
+            </div>
+            <div class="seller-input-group">
+                <label>Product Photo</label>
+                <div class="file-input-wrapper">
+                    <div class="file-input-label" id="fileLabel2">📷 Click or drop photo here</div>
+                    <input type="file" id="sellerPhoto2" accept="image/*">
+                </div>
+            
+            <button class="save-btn" id="deletePhoto2" style="background: transparent; border: 2px solid #ff6b6b; color: #ff6b6b; margin-top: 10px; display: none;">🗑 Delete Photo</button></div>
+        </div>
+
+        <button class="save-btn" id="saveChanges">✦ Save Changes</button>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span class="notification-icon">✨</span>
+        <div class="notification-text"><h4>Added to Cart!</h4><p id="notificationText">Moon Shadow Hoodie</p></div>
+    </div>
+
+    <!-- Seller Toggle -->
+    <div class="seller-toggle" id="sellerToggle" title="Seller Panel">⚙</div>
+
+    <!-- Music Toggle -->
+    <div class="music-toggle" id="musicToggle">♪</div>
+
+    <script>
+        // ========== ROLE GATE ==========
+        const roleGate = document.getElementById('roleGate');
+        const btnUser = document.getElementById('btnUser');
+        const btnSeller = document.getElementById('btnSeller');
+        let isSeller = false;
+
+        function setUserMode() {
+            isSeller = false;
+            document.body.classList.add('locked');
+            document.querySelectorAll('.card').forEach(card => {
+                card.setAttribute('draggable', 'false');
+                card.style.cursor = 'default';
+            });
+            document.getElementById('sellerToggle').style.display = 'none';
+            document.getElementById('dragHint').style.display = 'none';
+            roleGate.classList.add('hidden');
+        }
+
+        function setSellerMode() {
+            isSeller = true;
+            document.body.classList.remove('locked');
+            document.querySelectorAll('.card').forEach(card => {
+                card.setAttribute('draggable', 'true');
+                card.style.cursor = 'grab';
+            });
+            document.getElementById('sellerToggle').style.display = 'flex';
+            document.getElementById('dragHint').style.display = 'block';
+            roleGate.classList.add('hidden');
+        }
+
+        btnUser.addEventListener('click', setUserMode);
+        btnSeller.addEventListener('click', setSellerMode);
+
+        // ========== STARS ==========
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.setProperty('--duration', (Math.random() * 3 + 2) + 's');
+            star.style.setProperty('--delay', Math.random() * 5 + 's');
+            star.style.setProperty('--opacity', Math.random() * 0.7 + 0.3);
+            starsContainer.appendChild(star);
+        }
+
+        // ========== CUSTOM CURSOR ==========
+        const cursor = document.querySelector('.cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+            cursorDot.style.left = e.clientX - 3 + 'px';
+            cursorDot.style.top = e.clientY - 3 + 'px';
+        });
+        document.querySelectorAll('a, button, .card, input, select').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+
+        // ========== SCROLL REVEAL ==========
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ========== DRAG & DROP WITH PHOTO GHOST ==========
+        const productGrid = document.getElementById('productGrid');
+        let draggedCard = null;
+        let ghostEl = null;
+
+        function createGhost(card, x, y) {
+            const rect = card.getBoundingClientRect();
+            ghostEl = card.cloneNode(true);
+            ghostEl.classList.add('drag-ghost');
+            ghostEl.style.width = rect.width + 'px';
+            ghostEl.style.height = rect.height + 'px';
+            ghostEl.style.left = (x - rect.width / 2) + 'px';
+            ghostEl.style.top = (y - rect.height / 2) + 'px';
+            document.body.appendChild(ghostEl);
+        }
+        function updateGhost(x, y) {
+            if (ghostEl) {
+                const rect = ghostEl.getBoundingClientRect();
+                ghostEl.style.left = (x - rect.width / 2) + 'px';
+                ghostEl.style.top = (y - rect.height / 2) + 'px';
+            }
+        }
+        function removeGhost() {
+            if (ghostEl) { ghostEl.remove(); ghostEl = null; }
+        }
+
+        function initDragAndDrop() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('dragstart', function(e) {
+                    if (!isSeller) { e.preventDefault(); return; }
+                    draggedCard = this;
+                    this.classList.add('dragging');
+                    this.style.opacity = '0.3';
+                    e.dataTransfer.effectAllowed = 'move';
+                    e.dataTransfer.setData('text/html', this.innerHTML);
+                    createGhost(this, e.clientX, e.clientY);
+                    const img = new Image();
+                    img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+                    e.dataTransfer.setDragImage(img, 0, 0);
+                });
+                card.addEventListener('drag', function(e) { if (isSeller) updateGhost(e.clientX, e.clientY); });
+                card.addEventListener('dragend', function() {
+                    this.classList.remove('dragging');
+                    this.style.opacity = '1';
+                    removeGhost();
+                    cards.forEach(c => { c.classList.remove('drag-over'); c.style.transform = ''; });
+                    draggedCard = null;
+                });
+                card.addEventListener('dragover', function(e) {
+                    if (!isSeller) return;
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = 'move';
+                    if (this !== draggedCard) this.classList.add('drag-over');
+                });
+                card.addEventListener('dragleave', function() { this.classList.remove('drag-over'); });
+                card.addEventListener('drop', function(e) {
+                    if (!isSeller) return;
+                    e.preventDefault();
+                    this.classList.remove('drag-over');
+                    if (this !== draggedCard && draggedCard) {
+                        const allCards = Array.from(productGrid.children);
+                        const draggedIndex = allCards.indexOf(draggedCard);
+                        const targetIndex = allCards.indexOf(this);
+                        if (draggedIndex < targetIndex) productGrid.insertBefore(draggedCard, this.nextSibling);
+                        else productGrid.insertBefore(draggedCard, this);
+                        [draggedCard, this].forEach((c, i) => {
+                            setTimeout(() => {
+                                c.style.transition = 'none';
+                                c.style.borderColor = 'var(--pink)';
+                                c.style.boxShadow = '0 0 40px rgba(217, 166, 179, 0.3)';
+                                setTimeout(() => {
+                                    c.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                                    c.style.borderColor = ''; c.style.boxShadow = '';
+                                }, 400);
+                            }, i * 100);
+                        });
+                    }
+                });
+            });
+        }
+        initDragAndDrop();
+
+        // ========== SELLER PANEL ==========
+        const sellerPanel = document.getElementById('sellerPanel');
+        const sellerOverlay = document.getElementById('sellerOverlay');
+        const sellerToggle = document.getElementById('sellerToggle');
+        const closeSeller = document.getElementById('closeSeller');
+        const saveChanges = document.getElementById('saveChanges');
+
+        sellerToggle.addEventListener('click', () => { sellerPanel.classList.add('open'); sellerOverlay.classList.add('open'); });
+        closeSeller.addEventListener('click', closeSellerPanel);
+        sellerOverlay.addEventListener('click', closeSellerPanel);
+        function closeSellerPanel() { sellerPanel.classList.remove('open'); sellerOverlay.classList.remove('open'); }
+
+        // Photo upload previews with localStorage persistence
+        const photoData = {0: null, 1: null, 2: null};
+        const PHOTO_STORAGE_KEY = 'yoreta_photos';
+
+        function loadPhotosFromStorage() {
+            try {
+                const stored = localStorage.getItem(PHOTO_STORAGE_KEY);
+                if (stored) {
+                    const parsed = JSON.parse(stored);
+                    [0,1,2].forEach(i => {
+                        if (parsed[i]) {
+                            photoData[i] = parsed[i];
+                            applyPhotoToCard(i, parsed[i]);
+                            const label = document.getElementById('fileLabel' + i);
+                            label.textContent = '📷 Photo saved (click to replace)';
+                            label.classList.add('has-file');
+                            const delBtn = document.getElementById('deletePhoto' + i);
+                            if (delBtn) delBtn.style.display = 'block';
+                        }
+                    });
+                }
+            } catch (e) { console.error('Error loading photos:', e); }
+        }
+
+        function savePhotosToStorage() {
+            try {
+                localStorage.setItem(PHOTO_STORAGE_KEY, JSON.stringify(photoData));
+            } catch (e) { console.error('Error saving photos:', e); }
+        }
+
+        function deletePhotoFromStorage(index) {
+            photoData[index] = null;
+            savePhotosToStorage();
+            const imgContainer = document.getElementById('cardImg' + index);
+            const badgeEl = document.querySelector('[data-badge="' + index + '"]');
+            const badge = badgeEl ? badgeEl.textContent : '';
+            imgContainer.innerHTML = '<span class="card-badge" data-badge="' + index + '">' + badge + '</span>';
+            const label = document.getElementById('fileLabel' + index);
+            label.textContent = '📷 Click or drop photo here';
+            label.classList.remove('has-file');
+            const delBtn = document.getElementById('deletePhoto' + index);
+            if (delBtn) delBtn.style.display = 'none';
+        }
+
+        function applyPhotoToCard(index, dataUrl) {
+            const imgContainer = document.getElementById('cardImg' + index);
+            const badgeEl = document.querySelector('[data-badge="' + index + '"]');
+            const badge = badgeEl ? badgeEl.textContent : '';
+            imgContainer.innerHTML = '<img src="' + dataUrl + '" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1;"><span class="card-badge" data-badge="' + index + '">' + badge + '</span>';
+        }
+
+        [0,1,2].forEach(i => {
+            const input = document.getElementById('sellerPhoto' + i);
+            const label = document.getElementById('fileLabel' + i);
+            const delBtn = document.getElementById('deletePhoto' + i);
+
+            input.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                        photoData[i] = ev.target.result;
+                        label.textContent = '✅ ' + file.name;
+                        label.classList.add('has-file');
+                        if (delBtn) delBtn.style.display = 'block';
+                        savePhotosToStorage();
+                        applyPhotoToCard(i, ev.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            if (delBtn) {
+                delBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (confirm('Delete this photo? It will be removed permanently.')) {
+                        deletePhotoFromStorage(i);
+                    }
+                });
+            }
+        });
+
+        // Load persisted photos on page load
+        loadPhotosFromStorage();
+
+        saveChanges.addEventListener('click', () => {
+            [0,1,2].forEach(i => {
+                const name = document.getElementById('sellerName' + i).value;
+                const price = document.getElementById('sellerPrice' + i).value;
+                const badge = document.getElementById('sellerBadge' + i).value;
+
+                document.querySelector('[data-name="' + i + '"]').textContent = name;
+                document.querySelector('[data-price="' + i + '"]').textContent = price + ' EGP';
+                const badgeEl = document.querySelector('[data-badge="' + i + '"]');
+                if (badge) { badgeEl.textContent = badge; badgeEl.style.display = 'block'; }
+                else badgeEl.style.display = 'none';
+
+                // Update cart button data
+                const card = document.querySelector('.card[data-id="' + i + '"');
+                const cartBtn = card.querySelector('.add-to-cart');
+                cartBtn.dataset.product = name;
+                cartBtn.dataset.price = price;
+
+                // Photo already applied and saved via change handler + localStorage
+            });
+
+            notificationText.textContent = 'Products updated successfully!';
+            document.querySelector('.notification-text h4').textContent = '✦ Saved!';
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+                document.querySelector('.notification-text h4').textContent = 'Added to Cart!';
+            }, 3000);
+            closeSellerPanel();
+        });
+
+        // ========== SHARE ==========
+        const copyBtn = document.getElementById('copyBtn');
+        const shareUrl = document.getElementById('shareUrl');
+        shareUrl.value = window.location.href;
+        copyBtn.addEventListener('click', () => {
+            shareUrl.select(); shareUrl.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(shareUrl.value).then(() => {
+                copyBtn.textContent = 'Copied!';
+                copyBtn.classList.add('copied');
+                setTimeout(() => { copyBtn.textContent = 'Copy Link'; copyBtn.classList.remove('copied'); }, 2000);
+            });
+        });
+
+        // ========== CART ==========
+        let cart = [];
+        const cartSidebar = document.getElementById('cartSidebar');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const cartItems = document.getElementById('cartItems');
+        const cartCount = document.getElementById('cartCount');
+        const cartTotal = document.getElementById('cartTotal');
+        const totalPrice = document.getElementById('totalPrice');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const notification = document.getElementById('notification');
+        const notificationText = document.getElementById('notificationText');
+
+        function updateCart() {
+            cartCount.textContent = cart.length;
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="empty-cart"><span class="empty-cart-icon">🌙</span><p>Your cart is empty</p><p style="font-size: 13px; margin-top: 10px;">Add some dreamy hoodies ✨</p></div>';
+                cartTotal.style.display = 'none'; checkoutBtn.style.display = 'none';
+            } else {
+                cartItems.innerHTML = cart.map((item, index) => '<div class="cart-item"><div class="cart-item-image">✦</div><div class="cart-item-info"><h4>' + item.name + '</h4><p>' + item.price + ' EGP</p></div><button onclick="removeFromCart(' + index + ')" style="background: none; border: none; color: var(--pink); cursor: pointer; font-size: 18px; margin-left: auto;">✕</button></div>').join('');
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                totalPrice.textContent = total + ' EGP';
+                cartTotal.style.display = 'flex'; checkoutBtn.style.display = 'block';
+            }
+        }
+        function addToCart(product, price) {
+            cart.push({ name: product, price: parseInt(price) });
+            updateCart();
+            notificationText.textContent = product;
+            document.querySelector('.notification-text h4').textContent = 'Added to Cart!';
+            notification.classList.add('show');
+            setTimeout(() => notification.classList.remove('show'), 3000);
+        }
+        function removeFromCart(index) { cart.splice(index, 1); updateCart(); }
+
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', () => addToCart(btn.dataset.product, btn.dataset.price));
+        });
+        document.getElementById('cartIcon').addEventListener('click', () => { cartSidebar.classList.add('open'); cartOverlay.classList.add('open'); });
+        document.getElementById('closeCart').addEventListener('click', closeCart);
+        cartOverlay.addEventListener('click', closeCart);
+        function closeCart() { cartSidebar.classList.remove('open'); cartOverlay.classList.remove('open'); }
+
+        // ========== MUSIC TOGGLE ==========
+        const musicToggle = document.getElementById('musicToggle');
+        let isPlaying = false;
+        musicToggle.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            musicToggle.classList.toggle('playing', isPlaying);
+            musicToggle.textContent = isPlaying ? '♫' : '♪';
+        });
+
+        // ========== SMOOTH SCROLL ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // ========== CHECKOUT ==========
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+            alert('✨ Thank you for shopping with YORETA! Your dreamy hoodies are on their way. 🌙');
+            cart = []; updateCart(); closeCart();
+        });
+    </script>
+</body>
+</html>
